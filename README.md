@@ -143,5 +143,5 @@ Doctrine annotation error:
 Can fix it registering the JMS namespace:
 
 ```php
-Doctrine\Common\Annotations\AnnotationRegistry::registerAutoloadNamespace('JMS\Serializer\Annotation', __DIR__ . "/../vendor/jms/serializer/src");
+Doctrine\Common\Annotations\AnnotationRegistry::registerAutoloadNamespace('JMS\Serializer\Annotation', $rootDir . "/vendor/jms/serializer/src");
 ```
