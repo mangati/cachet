@@ -1,0 +1,29 @@
+{
+    "name": "mangati/cachet",
+    "type": "libray",
+    "description": "Cachet client",
+    "keywords": ["cachet", "client", "status", "cachethq"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rogério Alencar Lino Filho",
+            "email": "rogeriolino@gmail.com",
+            "homepage": "http://rogeriolino.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Tests\\": "tests/" }
+    },
+    "require": {
+        "php": ">=5.4",
+        "guzzlehttp/guzzle": "~6.0",
+        "jms/serializer": "~1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0"
+    }
+}
