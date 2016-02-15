@@ -36,6 +36,13 @@ class Incident extends Entity
     /**
      * @var int
      * @JMS\Type("integer")
+     * @JMS\SerializedName("component_status")
+     */
+    private $componentStatus;
+
+    /**
+     * @var int
+     * @JMS\Type("integer")
      */
     private $status;
 
@@ -118,6 +125,14 @@ class Incident extends Entity
     }
 
     /**
+     * @return int
+     */
+    public function getComponentStatus()
+    {
+        return $this->componentStatus;
+    }
+
+    /**
      * Set the value of Component
      *
      * @param int component
@@ -129,6 +144,14 @@ class Incident extends Entity
         $this->component = $component;
 
         return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function setComponentStatus($status)
+    {
+        $this->componentStatus = $status;
     }
 
     /**
