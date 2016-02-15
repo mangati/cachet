@@ -87,7 +87,7 @@ foreach ($incidents as $incident) {
 Sorting
 
 ```php
-$components = $client->getIncidents([
+$incidents = $client->getIncidents([
     'sort' => 'id',
     'order' => 'desc'
 ]);
