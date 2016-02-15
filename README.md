@@ -1,6 +1,6 @@
 # Cachet
 
-Cachet client
+Cachet PHP client.
 
 ## About Cachet
 
