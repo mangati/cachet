@@ -11,7 +11,12 @@ Cachet is an open source status page system written in PHP. https://github.com/C
 Setup
 
 ```php
-$client = new Client('https://demo.cachethq.io/api/v1/', '9yMHsdioQosnyVK4iCVR');
+use Mangati\Cachet\Client;
+
+$endpoint = 'https://demo.cachethq.io/api/v1/';
+$token    = '9yMHsdioQosnyVK4iCVR';
+
+$client = new Client($endpoint, $token);
 ```
 
 ### Components
