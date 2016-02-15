@@ -46,7 +46,7 @@ Get by id
 $component = $client->getComponent(3);
 ```
 
-Creating new component
+Create new component
 
 ```php
 $component = new Component();
@@ -58,7 +58,7 @@ $component->setStatus(Component::STATUS_OPERATIONAL);
 $client->addComponent($component);
 ```
 
-Updating existing component
+Update an existing component
 
 ```php
 $component = new Component();
@@ -68,7 +68,7 @@ $component->setName('My new component (updated)');
 $client->updateComponent($component);
 ```
 
-Deleting existing component
+Delete an existing component
 
 ```php
 $id = 3;
@@ -104,7 +104,7 @@ Get by id
 $incident = $client->getIncident(3);
 ```
 
-Creating new incident
+Create new incident
 
 ```php
 $incident = new Incident();
@@ -115,7 +115,7 @@ $incident->setStatus(Incident::STATUS_WATCHING);
 $client->addIncident($incident);
 ```
 
-Updating existing incident
+Update an existing incident
 
 ```php
 $incident = new Incident();
@@ -125,7 +125,7 @@ $incident->setStatus(Incident::STATUS_FIXED);
 $client->updateIncident($incident);
 ```
 
-Deleting existing incident
+Delete an existing incident
 
 ```php
 $id = 3;
