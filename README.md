@@ -132,3 +132,16 @@ $id = 3;
 
 $client->deleteIncident($id);
 ```
+
+
+## Known issue
+
+Doctrine annotation error:
+
+    HP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Semantical Error] The annotation "@JMS\Serializer\Annotation\Type" in property (...) does not exist, or could not be auto-loaded.'
+
+Can fix it registering the JMS namespace:
+
+```php
+Doctrine\Common\Annotations\AnnotationRegistry::registerAutoloadNamespace('JMS\Serializer\Annotation', __DIR__ . "/../vendor/jms/serializer/src");
+```
