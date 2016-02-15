@@ -107,7 +107,7 @@ $incident->setName('My new incident');
 $incident->setMessage('incident message');
 $incident->setStatus(Incident::STATUS_WATCHING);
 
-$client->addIncident($$incident);
+$client->addIncident($incident);
 ```
 
 Updating existing incident
