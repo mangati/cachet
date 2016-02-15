@@ -4,7 +4,7 @@ Cachet PHP client.
 
 ## About Cachet
 
-Cachet is an open source status page system written in PHP. https://github.com/CachetHQ/Cachet
+Cachet is an open source status page system written in PHP. https://github.com/CachetHQ/Cachet.
 
 ## Usage
 
@@ -138,7 +138,9 @@ $client->deleteIncident($id);
 
 Doctrine annotation error:
 
-    HP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Semantical Error] The annotation "@JMS\Serializer\Annotation\Type" in property (...) does not exist, or could not be auto-loaded.'
+```php
+PHP Fatal error:  Uncaught exception 'Doctrine\Common\Annotations\AnnotationException' with message '[Semantical Error] The annotation "@JMS\Serializer\Annotation\Type" in property (...) does not exist, or could not be auto-loaded.'
+```
 
 Can fix it registering the JMS namespace:
 
