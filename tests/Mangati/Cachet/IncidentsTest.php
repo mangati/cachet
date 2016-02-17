@@ -17,14 +17,14 @@ class IncidentsTest extends AbstractTest
     {
         $result = $this->client->getIncidents();
 
-        $this->assertEquals(true, is_array($result));
+        $this->assertTrue(is_array($result));
     }
 
     public function testGetOne()
     {
         $result = $this->client->getIncident(1);
 
-        $this->assertEquals(true, $result instanceof Incident);
+        $this->assertTrue($result instanceof Incident);
         $this->assertEquals(1, $result->getId());
     }
 
@@ -37,8 +37,8 @@ class IncidentsTest extends AbstractTest
 
         $result = $this->client->addIncident($incident);
 
-        $this->assertEquals(true, $result instanceof Incident);
-        $this->assertEquals(true, $result->getId() > 0);
+        $this->assertTrue($result instanceof Incident);
+        $this->assertTrue($result->getId() > 0);
         $this->assertEquals('Testing my client', $result->getName());
 
         $this->id = $result->getId();
@@ -55,8 +55,8 @@ class IncidentsTest extends AbstractTest
 
             $result = $this->client->updateIncident($incident);
 
-            $this->assertEquals(true, $result instanceof Incident);
-            $this->assertEquals(true, $result->getId() > 0);
+            $this->assertTrue($result instanceof Incident);
+            $this->assertTrue($result->getId() > 0);
             $this->assertEquals('Testing my client (updated)', $result->getName());
             $this->assertEquals(Incident::STATUS_FIXED, $result->getStatus());
         }
@@ -67,7 +67,7 @@ class IncidentsTest extends AbstractTest
         if ($this->id) {
             $result = $this->client->deleteIncident($this->id);
 
-            $this->assertEquals(true, $result);
+            $this->assertTrue($result);
         }
     }
 }
