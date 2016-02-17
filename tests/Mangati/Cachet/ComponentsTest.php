@@ -17,14 +17,14 @@ class ComponentsTest extends AbstractTest
     {
         $result = $this->client->getComponents();
 
-        $this->assertEquals(true, is_array($result));
+        $this->assertTrue(is_array($result));
     }
 
     public function testGetOne()
     {
         $result = $this->client->getComponent(1);
 
-        $this->assertEquals(true, $result instanceof Component);
+        $this->assertTrue($result instanceof Component);
         $this->assertEquals(1, $result->getId());
     }
 
@@ -38,8 +38,8 @@ class ComponentsTest extends AbstractTest
 
         $result = $this->client->addComponent($component);
 
-        $this->assertEquals(true, $result instanceof Component);
-        $this->assertEquals(true, $result->getId() > 0);
+        $this->assertTrue($result instanceof Component);
+        $this->assertTrue($result->getId() > 0);
         $this->assertEquals('Testing my client', $result->getName());
 
         $this->id = $result->getId();
@@ -57,8 +57,8 @@ class ComponentsTest extends AbstractTest
 
             $result = $this->client->updateComponent($component);
 
-            $this->assertEquals(true, $result instanceof Component);
-            $this->assertEquals(true, $result->getId() > 0);
+            $this->assertTrue($result instanceof Component);
+            $this->assertTrue($result->getId() > 0);
             $this->assertEquals('Testing my client (updated)', $result->getName());
         }
     }
@@ -68,7 +68,7 @@ class ComponentsTest extends AbstractTest
         if ($this->id) {
             $result = $this->client->deleteIncident($this->id);
 
-            $this->assertEquals(true, $result);
+            $this->assertTrue($result);
         }
     }
 }
