@@ -1,6 +1,6 @@
 {
     "name": "mangati/cachet",
-    "type": "libray",
+    "type": "library",
     "description": "Cachet client",
     "keywords": ["cachet", "client", "status", "cachethq"],
     "license": "MIT",
